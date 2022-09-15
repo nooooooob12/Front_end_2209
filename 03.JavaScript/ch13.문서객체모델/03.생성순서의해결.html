@@ -4,14 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document:Object Model</title>
-    <script >alert('title')</script>
+    <title>Document:Object Model 문제 해결</title>
+       <script >
+        function handler() {
+        document.querySelector('h1').style.backgroundColor ='yellow';
+        document.querySelector('h3').style.color='red';
+    }
+/*     window.onload = handler; */ //이벤트 핸들러 등록 함수()가 없음
+    </script>
 </head>
-<body>
+<body onload="handler()"> <!--이벤트 발생 시 핸들러 호출 ()가 있음-->
     <h1>Header 1</h1>
-    <script>alert('header_1');</script>
     <h3>Header 3</h3>
-    <script>alert('headr_3');</script>
     
 </body>
 </html>
