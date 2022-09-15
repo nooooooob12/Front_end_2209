@@ -1,0 +1,22 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document:Object Model.Error</title>
+    <!-- <script > // typeError : h1,h3태그 생성 전 호출해서 코드에러
+                  // console창을 통해 확인 가능.
+        document.querySelector('h1').style.backgroundColor ='yellow';
+        document.querySelector('h3').style.color='red';
+    </script> -->
+</head>
+<body>
+    <h1>Header 1</h1>
+    <h3>Header 3</h3>
+    <script > // h1, h3 태그 생성 이후 수행되도록 순서를 주면 에러 x
+        document.querySelector('h1').style.backgroundColor ='yellow';
+        document.querySelector('h3').style.color='red';
+    </script>
+</body>
+</html>
