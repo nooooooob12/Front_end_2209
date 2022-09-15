@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function clicked() {
+            alert('click!!');
+        }
+        window.onload=function(){
+            const button2 = document.getElementById('button2');
+            button2.onclick = function() {
+                alert('click!!!');
+            }
+            const button3 = document.getElementById('button3');
+            button3.addEventListener('click', () => {
+                alert('click!!!!');
+            });
+            button3.addEventListener('mouseover', () => {
+            const h3 = document.createElement('h3');
+            const textNode = document.createTextNode('마우스 오버 이벤트 발생!');
+            h3.appendChild(textNode);
+            document.body.appendChild(h3);
+            });
+            button3.addEventListener('mouseout', () => {
+                const h3 = document.querySelector('h3');
+                document.body.removeChild(h3);
+            })
+        }
+    </script>
+</head>
+<body style="margin: 50px;">
+    <button onclick="alert('click!')">버튼</button>
+    <button onclick="clicked()">버튼1</button>
+    <button id="button2">버튼2</button>
+    <button id="button3">버튼3</button>
+
+</body>
+</html>
