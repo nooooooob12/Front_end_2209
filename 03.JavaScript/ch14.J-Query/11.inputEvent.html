@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <title>inputKeyboardEvent</title>
+    <script>
+        $(document).ready(function(){
+            $('input').on('keyup',function(event){
+                $('#keyup').html($(this).val()); // 글자를 입력할 때 마다
+            }).on('change',function(){
+                $('#change').html($(this).val()); // 입력하고 엔터를 쳤을 때
+            });
+        });
+    </script>
+</head>
+<body style="margin:50px;">
+    입력:<input type="text">
+    <hr>
+    입력되고 있는 글자:<p id="keyup"></p>
+    입력된 글자:<p id="change"></p>
+</body>
+</html>

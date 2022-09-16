@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+      /*       $('h1').on('click',function(e){ //첫번째 줄에서만 객체 생성이 가능하다.
+                $('<h1></h1>').text($(this).text()).appendTo('body');
+            }); */
+            const handler = function(event){
+                $('<h1></h1>')
+                    .text($(this).text())
+                    .on('click',handler)    
+                    .appendTo('body');
+            }
+            /* $('h1').on('click',handler); */
+            $('h1').click(handler);
+        });
+    </script>
+    <title>객체생성(Jquerry)</title>
+</head>
+<body style="margin:50px;">
+    <h1>Header</h1>
+</body>
+</html>
