@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script>
+        $('body').on()
         $(document).ready(function(){
             $('body').on('click','h1',function(e){ // 모든 줄에서 객체 생성이 가능해짐. 부모태그에서 처리함
                 $('<h1></h1>').text($(this).text()).appendTo('body');
@@ -13,7 +14,7 @@
         });
     </script>
     <title>이벤트간접연결</title>
-</head>
+</head> 
 <body style="margin:50px;">
     <h1>Header</h1>
 </body>
